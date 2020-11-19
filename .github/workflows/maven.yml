@@ -8,6 +8,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,4 +25,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: PortableMending 
-        path: output
+        path: output/*.jar
