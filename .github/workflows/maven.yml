@@ -19,9 +19,9 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    -  run: mvn -B package --file pom.xml
-    - run mkdir output && cp target/*.jar output
-    - uses actions/upload-artifact@v2
+    - run: mvn -B package --file pom.xml
+    - run: mkdir output && cp target/*.jar output
+    - uses: actions/upload-artifact@v2
       with:
         name: PortableMending 
         path: output
